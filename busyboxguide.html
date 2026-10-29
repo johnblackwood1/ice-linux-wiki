@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>How to fix commands not working</title>
+  </head>
+  <body>
+    <h1>Ice Linux | Wiki | How to fix commands not working</h1>
+    <p>!!! For this guide you have to be logged into root! Your command line should have a # if logged into root. !!!</p>
+    <hr>
+    <p>This guide/tutorial shows you how to:</p>
+    <p>1. Installing busybox (so commands like ls and cd work).</p>
+    <p>2. Test busybox.</p>
+    <br>
+    <h1>Step 1: installing busybox</h1>
+    <p>You may be asking "How do you install busybox?". Its really simple</p>
+    <div>
+      <code>/bin/busybox --install -s /bin</code>
+    </div>
+    <br>
+    <h1>Step 2: Testing busybox (to see if it succesfully installed</h1>
+    <p>You may be asking "How do i know if busybox installed?". This step is gonna tell you how to test it.</p>
+    <div>
+      <code>/bin/busybox --help</code>
+    </div>
+    <p>This should work and it should output a string. Boom! You have both installed busybox (for commands) and tested it!</p>
+  </body>
+</html>
