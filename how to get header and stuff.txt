@@ -1,0 +1,18 @@
+for header you can do 
+<script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+</script>
+
+and then for guides you do
+<script>
+    // Load Header
+    fetch('guidelist.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('guides').innerHTML = data;
+      });
+</script>
