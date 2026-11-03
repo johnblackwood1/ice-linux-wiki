@@ -3,9 +3,9 @@
     <title>How to fix commands not working</title>
   </head>
   <body>
-    <h1>Ice Linux | Wiki | How to fix commands not working</h1>
+    <div id="header">
     <p>!!! For this guide you have to be logged into root! Your command line should have a # if logged into root. !!!</p>
-    <hr>
+    
     <p>This guide/tutorial shows you how to:</p>
     <p>1. Installing busybox (so commands like ls and cd work).</p>
     <p>2. Test busybox.</p>
@@ -22,5 +22,12 @@
       <code>ls</code>
     </pre>
     <p>This should output all the files in the directory. Boom! You have both installed busybox (for commands) and tested it!</p>
+    <script>
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        });
+    </script>
   </body>
 </html>
