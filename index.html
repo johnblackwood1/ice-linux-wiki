@@ -3,12 +3,26 @@
     <title>Ice Linux wiki</title>
   </head>
   <body>
-    <h1>Ice Linux | Wiki</h1>
+    <div id="header">
     <hr>
     <p>Hello! Welcome to the Ice Linux Wiki. This wiki consists of tutorials, guides and more.</p>
     <a class="github-button" href="https://github.com/johnblackwood1/Ice-Linux/archive/HEAD.zip" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-download" data-size="large" aria-label="Download Source code">Download</a>
     <br>
     <h1>- Guides/Tutorials -</h1>
-    <a href="busyboxguide.html">How to fix commands not working (like ls and more)</a>
+    <div id="guides"></div>
+    <script>
+      fetch('guidelist.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('guides').innerHTML = data;
+        });
+    </script>
+    <script>
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        });
+    </script>
   </body>
 </html>
