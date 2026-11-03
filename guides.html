@@ -1,0 +1,9 @@
+<div id="guides">
+<script>
+    // Load Header
+    fetch('guidelist.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('guides').innerHTML = data;
+      });
+</script>
